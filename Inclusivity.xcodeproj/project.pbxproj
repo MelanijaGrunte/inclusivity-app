@@ -12,7 +12,6 @@
 		E9670C8B2476E7BF00405CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670C8A2476E7BF00405CD2 /* AppDelegate.swift */; };
 		E9670C8D2476E7BF00405CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670C8C2476E7BF00405CD2 /* SceneDelegate.swift */; };
 		E9670C912476E7C000405CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9670C902476E7C000405CD2 /* Assets.xcassets */; };
-		E9670C942476E7C000405CD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9670C932476E7C000405CD2 /* Preview Assets.xcassets */; };
 		E9670CA52476E85100405CD2 /* ColorDeficiency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CA42476E85100405CD2 /* ColorDeficiency.swift */; };
 		E9670CA72476E86600405CD2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CA62476E86600405CD2 /* Settings.swift */; };
 		E9670CA92476E87F00405CD2 /* TestBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CA82476E87F00405CD2 /* TestBaseViewController.swift */; };
@@ -32,6 +31,8 @@
 		E9670CC52476E96E00405CD2 /* InclusivityBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CC42476E96E00405CD2 /* InclusivityBaseViewController.swift */; };
 		E9670CC72476E98B00405CD2 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CC62476E98B00405CD2 /* Anchorage.swift */; };
 		E9670CC92476E9A900405CD2 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9670CC82476E9A900405CD2 /* CGFloat.swift */; };
+		E9F97C25247AA067008980CD /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F97C24247AA067008980CD /* TimeInterval.swift */; };
+		E9F97C27247AA410008980CD /* armstrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F97C26247AA410008980CD /* armstrong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,6 @@
 		E9670C8A2476E7BF00405CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9670C8C2476E7BF00405CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9670C902476E7C000405CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E9670C932476E7C000405CD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9670C982476E7C000405CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9670CA42476E85100405CD2 /* ColorDeficiency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDeficiency.swift; sourceTree = "<group>"; };
 		E9670CA62476E86600405CD2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		E9670CC42476E96E00405CD2 /* InclusivityBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InclusivityBaseViewController.swift; sourceTree = "<group>"; };
 		E9670CC62476E98B00405CD2 /* Anchorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchorage.swift; sourceTree = "<group>"; };
 		E9670CC82476E9A900405CD2 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		E9F97C24247AA067008980CD /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		E9F97C26247AA410008980CD /* armstrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = armstrong.mp3; sourceTree = "<group>"; };
 		FEE6A4A34220EFB80EA02E78 /* Pods_Inclusivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inclusivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 		E9670C7E2476E7BE00405CD2 = {
 			isa = PBXGroup;
 			children = (
+				E9F97C26247AA410008980CD /* armstrong.mp3 */,
 				E9670C892476E7BE00405CD2 /* Inclusivity */,
 				E9670C882476E7BE00405CD2 /* Products */,
 				6CE4A0270B4140DFDCA892A8 /* Pods */,
@@ -124,18 +127,9 @@
 				E9670C8C2476E7BF00405CD2 /* SceneDelegate.swift */,
 				E9670C902476E7C000405CD2 /* Assets.xcassets */,
 				E9670C982476E7C000405CD2 /* Info.plist */,
-				E9670C922476E7C000405CD2 /* Preview Content */,
 				E95F68FE2477135900D27E37 /* Storyboard.storyboard */,
 			);
 			path = Inclusivity;
-			sourceTree = "<group>";
-		};
-		E9670C922476E7C000405CD2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E9670C932476E7C000405CD2 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E9670C9E2476E80200405CD2 /* models */ = {
@@ -178,6 +172,7 @@
 				E9670CC22476E95000405CD2 /* UIColor.swift */,
 				E9670CC62476E98B00405CD2 /* Anchorage.swift */,
 				E9670CC82476E9A900405CD2 /* CGFloat.swift */,
+				E9F97C24247AA067008980CD /* TimeInterval.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -253,7 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9670C942476E7C000405CD2 /* Preview Assets.xcassets in Resources */,
+				E9F97C27247AA410008980CD /* armstrong.mp3 in Resources */,
 				E9670C912476E7C000405CD2 /* Assets.xcassets in Resources */,
 				E95F68FF2477135900D27E37 /* Storyboard.storyboard in Resources */,
 			);
@@ -329,6 +324,7 @@
 				E9670CB32476E8C700405CD2 /* SettingsDetailsVC.swift in Sources */,
 				E9670CC12476E94500405CD2 /* UIView.swift in Sources */,
 				E9670CB12476E8B900405CD2 /* SettingsVC.swift in Sources */,
+				E9F97C25247AA067008980CD /* TimeInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Inclusivity/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Inclusivity\"";
 				DEVELOPMENT_TEAM = XYPAGBTY55;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Inclusivity/Info.plist;
@@ -476,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Inclusivity/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Inclusivity\"";
 				DEVELOPMENT_TEAM = XYPAGBTY55;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Inclusivity/Info.plist;

@@ -31,7 +31,7 @@ public class FirstTestVC: TestBaseViewController {
     private let basicButton: UIButton = {
         let basicButton = UIButton()
         basicButton.setTitle(NSLocalizedString("Spiest pogu", comment: ""), for: .normal)
-        basicButton.backgroundColor = UIColor.red
+        basicButton.backgroundColor = UIColor.green
         basicButton.setTitleColor(UIColor.white, for: .normal)
         return basicButton
     }()
