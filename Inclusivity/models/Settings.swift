@@ -31,25 +31,6 @@ public enum DisabilitySection: String, CaseIterable {
     }
 }
 
-/*
- 
- case is UITapGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UIPinchGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UIRotationGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UISwipeGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UIPanGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UIScreenEdgePanGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- case is UILongPressGestureRecognizer:
-     gestureRecognizer.isEnabled = UserDefaults.standard.bool(forKey: DisabilityCell.none.rawValue)
- 
- */
-
 public enum DisabilityCell: String, CaseIterable {
     case
     blur, ghosting, floaters, visual_snow, color_blindness, glare, glaucoma, blindness, cataracts, macular_degeneration, retinal_detachment, diabetic_retinopathy, hemianopia,
