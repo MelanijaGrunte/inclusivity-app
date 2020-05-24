@@ -147,7 +147,8 @@ public enum DisabilityCell: String, CaseIterable {
         case .no_pinch, .no_rotation, .no_swipe, .no_pan, .no_long_press, .no_screen_edge_pan: return false
         case .no_tap: return true
             
-        case .slowness, .seizures, .illiteracy, .dyslexia, .adhd, .dyscalculia, .dysgraphia, .processing_deficits: return false
+        case .adhd, .dysgraphia: return true
+        case .slowness, .seizures, .illiteracy, .dyslexia, .dyscalculia, .processing_deficits: return false
             
         case .complete, .partial: return false
         }

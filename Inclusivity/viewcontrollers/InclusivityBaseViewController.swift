@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import Anchorage
+import AVFoundation
+import MediaPlayer
 
 public class InclusivityBaseViewController: UIViewController {
     
@@ -101,11 +103,17 @@ public class InclusivityBaseViewController: UIViewController {
         duplicateViews()
         addFloaters()
         addCataracts()
-        removeGestureRecogznizers()
         addColorDeficiency()
         addDiabeticRetinopathy()
         addRetinalDetachment(horizontalMode: true, diagonalMode: true)
         addHemianopia()
+        
+        removeGestureRecogznizers()
+        
+        animateFocusDifficulties()
+        manipulateKeyboard()
+        
+        reduceVolume()
         
         bubbleButton.isHidden = false
         view.bringSubviewToFront(bubbleButton)
@@ -371,7 +379,7 @@ public class InclusivityBaseViewController: UIViewController {
         layersToRemove.append(gradientLayer)
     }
     
-    // MARK: Motor disability (remove gesture recoznizers)
+    // MARK: Motor disability: Remove gesture recoznizers
     
     private func removeGestureRecogznizers() {
         view.subviews.forEach { subview in
@@ -404,5 +412,56 @@ public class InclusivityBaseViewController: UIViewController {
                     break
                 }
             }}
+    }
+    
+    // MARK: Cognitive: adhd
+    
+    private func animateFocusDifficulties() {
+        guard UserDefaults.standard.bool(forKey: DisabilityCell.adhd.rawValue) else { return }
+        
+        let unfocusedView = UIView()
+        view.addSubview(unfocusedView) {
+            $0.topAnchor == $1.topAnchor
+            $0.bottomAnchor == $1.bottomAnchor
+            $0.leftAnchor == $1.leftAnchor
+            $0.rightAnchor == $1.rightAnchor
+        }
+        unfocusedView.isUserInteractionEnabled = false
+        unfocusedView.backgroundColor = UIColor.clear
+        hideViewRandomly(unfocusedView)
+        
+        viewsToRemove.append(unfocusedView)
+    }
+    
+    private func hideViewRandomly(_ viewToHide: UIView) {
+        UIView.animate(withDuration: Double.random(in: 1 ..< 10), delay: TimeInterval.random(in: 10 ..< 20), options: [.autoreverse], animations: {
+            viewToHide.backgroundColor = UIColor.black
+        }, completion: { finished in
+            viewToHide.backgroundColor = UIColor.clear
+            self.hideViewRandomly(viewToHide)
+        })
+    }
+    
+    //  MARK: Cognitive: dysgraphia
+    
+    private func manipulateKeyboard() {
+        guard UserDefaults.standard.bool(forKey: DisabilityCell.dysgraphia.rawValue) else { return }
+
+        view.subviews.compactMap { $0 as? UITextField }.forEach { textfield in
+            textfield.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        textField.text = textField.text?.lowercased()
+    }
+    
+    // MARK: Hearing
+    
+    private func reduceVolume() {
+        let originalSystemVolume = AVAudioSession.sharedInstance().outputVolume
+        var currentSystemVolume = originalSystemVolume
+        currentSystemVolume = min(currentSystemVolume - 0.5, 0)
+        // TODO: cant
     }
 }

@@ -84,9 +84,7 @@ public class SecondTestVC: TestBaseViewController {
             try AVAudioSession.sharedInstance().setActive(true)
             
             audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            audioPlayer?.volume = 0.1
-            
+                        
             duration = audioPlayer?.duration ?? 0.0
             audioPlayer?.prepareToPlay()
             Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlayerTime), userInfo: nil, repeats: true)
