@@ -52,7 +52,7 @@ public class InclusivityBaseViewController: UIViewController {
     public let bubbleButton: UIButton = {
         let bubbleButton = UIButton()
         bubbleButton.setImage(UIImage(named: "app-icon"), for: .normal)
-        bubbleButton.accessibilityLabel = "Mock disability settings"
+        bubbleButton.accessibilityLabel = "Navigation to settings"
         bubbleButton.layer.cornerRadius = 30  // image.frame.size.width / 2
         bubbleButton.layer.shadowColor = UIColor.black.cgColor
         bubbleButton.layer.shadowOffset = CGSize(width: 1, height: 1)

@@ -13,6 +13,7 @@ import Anchorage
 public class SettingsDialogVC: UIViewController {
     private let headerView: UIView = {
         let view = UIView()
+        view.accessibilityLabel = "Header"
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 4
         return view
@@ -20,6 +21,7 @@ public class SettingsDialogVC: UIViewController {
     
     private let backButton: UIButton = {
         let button = UIButton()
+        button.accessibilityLabel = "Back"
         button.setImage(UIImage(named: "arrow-back"), for: .normal)
         button.backgroundColor = UIColor.clear
         return button
@@ -27,6 +29,7 @@ public class SettingsDialogVC: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.accessibilityLabel = "Settings"
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "Inclusivity iestatījumi"
         label.textColor = UIColor.black
@@ -37,6 +40,7 @@ public class SettingsDialogVC: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
+        tableView.accessibilityLabel = "Settings"
         tableView.backgroundColor = UIColor.clear
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseIdentifier)
         return tableView

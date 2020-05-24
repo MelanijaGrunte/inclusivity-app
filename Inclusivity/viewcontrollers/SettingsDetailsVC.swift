@@ -13,6 +13,7 @@ import Anchorage
 public class SettingsDetailsVC: UIViewController {
     private let headerView: UIView = {
         let view = UIView()
+        view.accessibilityLabel = "Header"
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 4
         return view
@@ -20,6 +21,7 @@ public class SettingsDetailsVC: UIViewController {
     
     private let backButton: UIButton = {
         let button = UIButton()
+        button.accessibilityLabel = "Back"
         button.setImage(UIImage(named: "arrow-back"), for: .normal)
         button.backgroundColor = UIColor.clear
         return button
@@ -36,6 +38,7 @@ public class SettingsDetailsVC: UIViewController {
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
+        label.accessibilityLabel = "Settings"
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         return stackView

@@ -29,6 +29,7 @@ public class SliderView: UIView {
     
     private let uiSlider: UISlider = {
         let uiSlider = UISlider()
+        uiSlider.accessibilityLabel = "Value setting"
         uiSlider.maximumValue = 100
         uiSlider.minimumValue = 0
         return uiSlider
@@ -36,6 +37,7 @@ public class SliderView: UIView {
     
     private let stepper: UIStepper = {
         let stepper = UIStepper()
+        stepper.accessibilityLabel = "Value setting"
         stepper.maximumValue = 100.0
         stepper.minimumValue = 0.0
         stepper.stepValue = 1

@@ -20,6 +20,7 @@ public class PickerView: UIView {
     
     private let pickerView: UIPickerView = {
         let pickerView = UIPickerView()
+        pickerView.accessibilityLabel = "Options"
         return pickerView
     }()
     

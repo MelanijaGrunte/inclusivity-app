@@ -29,6 +29,7 @@ public class SwitchView: UIView {
     
     private let uiSwitch: UISwitch = {
         let uiSwitch = UISwitch()
+        uiSwitch.accessibilityLabel = "On / Off"
         return uiSwitch
     }()
     

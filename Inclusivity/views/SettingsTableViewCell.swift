@@ -29,6 +29,7 @@ public class SettingsTableViewCell: UITableViewCell {
     
     private let uiSwitch: UISwitch = {
         let uiSwitch = UISwitch()
+        uiSwitch.accessibilityLabel = "On / Off"
         uiSwitch.isHidden = true
         return uiSwitch
     }()
