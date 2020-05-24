@@ -113,8 +113,6 @@ public class InclusivityBaseViewController: UIViewController {
         animateFocusDifficulties()
         manipulateKeyboard()
         
-        reduceVolume()
-        
         bubbleButton.isHidden = false
         view.bringSubviewToFront(bubbleButton)
     }
@@ -457,11 +455,20 @@ public class InclusivityBaseViewController: UIViewController {
     }
     
     // MARK: Hearing
-    
-    private func reduceVolume() {
-        let originalSystemVolume = AVAudioSession.sharedInstance().outputVolume
-        var currentSystemVolume = originalSystemVolume
-        currentSystemVolume = min(currentSystemVolume - 0.5, 0)
-        // TODO: cant
+}
+
+public class InclusivityAVAudioPlayer: AVAudioPlayer {
+    override public var volume: Float {
+        get {
+            return super.volume
+        } set {
+            if UserDefaults.standard.bool(forKey: DisabilityCell.complete_hearing_loss.rawValue) {
+                super.volume = 0
+            } else if UserDefaults.standard.bool(forKey: DisabilityCell.partial_hearing_loss.rawValue) {
+                super.volume =  max(super.volume - 0.5, 0)
+            } else {
+                super.volume =  super.volume
+            }
+        }
     }
 }

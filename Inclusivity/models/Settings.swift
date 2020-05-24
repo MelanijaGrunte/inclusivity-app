@@ -24,7 +24,7 @@ public enum DisabilitySection: String, CaseIterable {
     var cells: [DisabilityCell] {
         switch self {
         case .visual: return [.blur, .ghosting, .floaters, .visual_snow, .color_blindness, .glare, .glaucoma, .blindness, .cataracts, .macular_degeneration, .retinal_detachment, .diabetic_retinopathy, .hemianopia]
-        case .hearing: return [.complete, .partial]
+        case .hearing: return [.complete_hearing_loss, .partial_hearing_loss]
         case .motor: return [.no_pinch, .no_tap, .no_rotation, .no_swipe, .no_pan, .no_screen_edge_pan, .no_long_press]
         case .cognitive: return [.slowness, .seizures, .illiteracy, .dyslexia, .adhd, .dyscalculia, .dysgraphia, .processing_deficits]
         }
@@ -55,7 +55,7 @@ public enum DisabilityCell: String, CaseIterable {
     blur, ghosting, floaters, visual_snow, color_blindness, glare, glaucoma, blindness, cataracts, macular_degeneration, retinal_detachment, diabetic_retinopathy, hemianopia,
     no_pinch, no_tap, no_rotation, no_swipe, no_pan, no_screen_edge_pan, no_long_press,
     slowness, seizures, illiteracy, dyslexia, adhd, dyscalculia, dysgraphia, processing_deficits,
-    complete, partial
+    complete_hearing_loss, partial_hearing_loss
     
     var description: String {
         switch self {
@@ -90,8 +90,8 @@ public enum DisabilityCell: String, CaseIterable {
         case .dysgraphia: return "rakstīšanas problēmas"
         case .processing_deficits: return "uztveres problēmas"
             
-        case .complete: return "Kurlums"
-        case .partial: return "Vāja dzirde"
+        case .complete_hearing_loss: return "Kurlums"
+        case .partial_hearing_loss: return "Vāja dzirde"
         }
     }
     
@@ -128,8 +128,8 @@ public enum DisabilityCell: String, CaseIterable {
         case .dysgraphia: return []
         case .processing_deficits: return []
             
-        case .complete: return []
-        case .partial: return []
+        case .complete_hearing_loss: return []
+        case .partial_hearing_loss: return []
 
         }
     }
@@ -150,7 +150,7 @@ public enum DisabilityCell: String, CaseIterable {
         case .adhd, .dysgraphia: return true
         case .slowness, .seizures, .illiteracy, .dyslexia, .dyscalculia, .processing_deficits: return false
             
-        case .complete, .partial: return false
+        case .complete_hearing_loss, .partial_hearing_loss: return true
         }
     }
 }
