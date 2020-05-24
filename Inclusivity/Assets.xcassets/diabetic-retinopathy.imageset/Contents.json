@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "diabetic-retinopathy.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
