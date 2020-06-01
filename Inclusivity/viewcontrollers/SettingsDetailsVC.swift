@@ -38,7 +38,7 @@ public class SettingsDetailsVC: UIViewController {
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
-        label.accessibilityLabel = "Settings"
+        stackView.accessibilityLabel = "Settings"
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         return stackView
